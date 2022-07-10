@@ -5,4 +5,4 @@
  
  https://www.youtube.com/watch?v=rfscVS0vtbw
  
- Study 30 minutes Monday/Wednesday/Friday
+ Study 30 minutes Monday/Wednesday/Friday and upload Python exercises and exemples
