@@ -64,6 +64,6 @@ sqrt(25) # Square root
 
 #  https://docs.python.org/3/library/math.html has all the math module functions available
 
-
+# https://github.com/spyder-ide/spyder/releases
 
 
