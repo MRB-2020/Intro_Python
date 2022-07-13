@@ -63,3 +63,9 @@ floor(heights[0]) # returns 1. the largest integer less than or equal to x.
 sqrt(25) # Square root
 
 #  https://docs.python.org/3/library/math.html has all the math module functions available
+
+## List
+
+friends = ['Rodrigo', 'Daniel', 'Alexandre', 'Monica', 'Adriana', 'Flavia', 'Silvia']
+
+print(friends)
