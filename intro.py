@@ -324,3 +324,54 @@ thisdict.update({'year':2020}) #changes the valeu of key year to 2020
 # dict.values() Returns a view object. The view object contains the values of the dictionary, as a list.
 
 thisdict.values()
+
+
+##############
+### Pandas ###
+##############
+
+
+import pandas as pd
+
+list_jl = ['batman', 'wonder women', 'flash', 'super man', 'cyborg', 'aquaman']  #list
+
+print(list_jl)
+
+df = pd.DataFrame(list_jl)
+
+print(df)
+
+
+colunm_name = {'heros': list_jl,
+               'home': ['gotham', 'themyscira','central city','krypton', 'gotham', 'atlantis'],
+               'race': ['human', 'amazon', 'human', 'kryptonian', 'human', 'atlantian'],
+               'height': [1.88,1.83,1.80,1.90,1.95,1.85],
+               'weight': [95.25,74.84,81.19,106.14,174.63,147.41]
+               } #Dictionary
+
+print(colunm_name)
+
+colunm_name['heros'][0]
+colunm_name['heros'][2]
+
+df_jl = pd.DataFrame(colunm_name)
+
+print(df_jl)
+
+# indexing used [] and colunm name to get the whole colunm
+
+
+df_jl['home'] # returns all values on colunm "home" 
+df_jl['home'][2] # returns the value of colunm "home" and row
+
+df_jl.iloc[2] # return the values accross the conlum of row 2
+df_jl.iloc[2]['home'] # returns the value of row 2 and colunm "home"
+
+
+df_jl['bmi'] = df_jl['weight']/df_jl['height']**2 # adds a new colunm "bmi".
+
+print(df_jl)
+
+heavy = df_jl.loc[df_jl['bmi']>40, 'heros'].values.tolist() # transform pandas dataframe into list
+
+print(f'{heavy[0]} and {heavy[1]} need to diet')
