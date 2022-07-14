@@ -375,3 +375,47 @@ print(df_jl)
 heavy = df_jl.loc[df_jl['bmi']>40, 'heros'].values.tolist() # transform pandas dataframe into list
 
 print(f'{heavy[0]} and {heavy[1]} need to diet')
+
+
+
+
+
+#################################
+# trouble shoot DataCamp exercise 
+
+langs_count = {}
+
+langs_count
+type(langs_count)
+
+
+
+col = ('eng', 'eng', 'eng', 'por', 'por', 'spa', 'ger', 'spa')
+
+for entry in col:
+    if entry in langs_count.keys():
+        langs_count[entry] += 1  #Add to a specific key count
+    else:
+        langs_count[entry] = 1    # Assign key:value after the first if statement to avoid double counting
+        
+        
+print(langs_count)
+
+
+# dictionary comprehension
+
+langs_count1 = {}
+langs_count1 = {lan:col.count(lan) for lan in col}
+
+print(langs_count1)
+
+import pandas as pd
+
+
+df = pd.DataFrame(col, columns=['lan'])
+
+df['lan'].value_counts()
+
+
+col.count(df.index)
+col.count(col)
