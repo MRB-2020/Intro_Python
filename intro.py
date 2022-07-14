@@ -409,6 +409,9 @@ langs_count1 = {lan:col.count(lan) for lan in col}
 
 print(langs_count1)
 
+
+# pandas 
+
 import pandas as pd
 
 
@@ -416,6 +419,3 @@ df = pd.DataFrame(col, columns=['lan'])
 
 df['lan'].value_counts()
 
-
-col.count(df.index)
-col.count(col)
